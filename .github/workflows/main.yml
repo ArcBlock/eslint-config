@@ -1,0 +1,56 @@
+name: Npm publish
+
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Publish:
+    runs-on: ubuntu-latest
+
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          token: ${{ secrets.GIT_HUB_TOKEN }}
+
+      - name: Use Node.js v14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Config Git
+        run: |
+          git config --local user.name "bot"
+          git config --local user.email "bot@arcblock.io"
+
+      - name: Init
+        run: |
+          lerna bootstrap
+
+      - name: Publish to NPM
+        run: |
+          npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
+          echo "publish version ${CURRENT_VERSION}"
+          lerna version ${CURRENT_VERSION} --exact --no-push --force-publish --yes
+          lerna publish from-git --yes
+
+      - name: Update readme
+        run: |
+          node tools/update-readme.js
+          git commit -am '[skip ci] update readme'
+      - name: Push Readme
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GIT_HUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+      - name: Release
+        run: make release
