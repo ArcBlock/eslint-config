@@ -35,12 +35,12 @@ jobs:
         run: |
           lerna bootstrap
 
-      - name: Publish npm
+      - name: Publish to NPM
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
-          VERSION=$(cat version | awk '{$1=$1;print}')
-          echo "publish version ${VERSION}"
-          lerna publish $VERSION --force-publish --yes
+          echo "publish version ${CURRENT_VERSION}"
+          lerna version ${CURRENT_VERSION} --exact --no-push --force-publish --yes
+          lerna publish from-git --yes
 
       - name: Update readme
         run: |
