@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/%40arcblock%2Feslint-config-arcblock.svg)](https://badge.fury.io/js/%40arcblock%2Feslint-config-arcblock)
 
-This package provides Arcblock's JS .eslintrc (without React plugins) as an extensible shared config.
+This package provides Arcblock's JS .eslintrc (with React plugins) as an extensible shared config.
 
 ## Usage
 
