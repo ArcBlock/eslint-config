@@ -8,6 +8,6 @@
 
 ## Packages
 
-- [@arcblock/eslint-config-arcblock v0.1.2](./packages/eslint-config-arcblock)
-- [@arcblock/eslint-config-arcblock-base v0.1.2](./packages/eslint-config-arcblock-base)
+- [@arcblock/eslint-config v0.1.3](./packages/eslint-config)
+- [@arcblock/eslint-config-base v0.1.3](./packages/eslint-config-base)
 
