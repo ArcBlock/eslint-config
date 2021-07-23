@@ -1,5 +1,5 @@
 {
-  "name": "@arcblock/eslint-config-arcblock",
+  "name": "@arcblock/eslint-config",
   "version": "0.1.2",
   "description": "Arcblock's ESLint config",
   "author": "zhanghan <zhanghan@arcblock.io>",

@@ -1,6 +1,6 @@
-# `@arcblock/eslint-config-arcblock-base`
+# `@arcblock/eslint-config-base`
 
-[![npm version](https://badge.fury.io/js/%40arcblock%2Feslint-config-arcblock-base.svg)](https://badge.fury.io/js/%40arcblock%2Feslint-config-arcblock-base)
+[![npm version](https://badge.fury.io/js/%40arcblock%2Feslint-config-base.svg)](https://badge.fury.io/js/%40arcblock%2Feslint-config-base)
 
 This package provides Arcblock's base JS .eslintrc (without React plugins) as an extensible shared config.
 
@@ -8,7 +8,7 @@ This package provides Arcblock's base JS .eslintrc (without React plugins) as an
 
 We export two ESLint configurations for your usage.
 
-### eslint-config-arcblock-base
+### eslint-config-base
 
 Our default export contains all of our ESLint rules, including ECMAScript 6+. It requires `eslint`, `eslint-config-airbnb-base`, `eslint-plugin-import` and `eslint-plugin-unicorn`.
 
@@ -17,13 +17,13 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+. It
 If using **npm 5+**, use this shortcut
 
 ```sh
-  npx install-peerdeps --dev @arcblock/eslint-config-arcblock-base
+  npx install-peerdeps --dev @arcblock/eslint-config-base
 ```
 
 If using **yarn**, use this shortcut
 
 ```sh
-  npx install-peerdeps --dev --yarn @arcblock/eslint-config-arcblock-base
+  npx install-peerdeps --dev --yarn @arcblock/eslint-config-base
 ```
 
-2. Add `"extends": "@arcblock/eslint-config-arcblock-base"` to your `.eslintrc` file.
+2. Add `"extends": "@arcblock/eslint-config-base"` to your `.eslintrc` file.
