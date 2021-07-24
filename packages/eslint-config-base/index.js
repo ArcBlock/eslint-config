@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb-base'],
+  extends: ['airbnb-base', 'plugin:prettier/recommended'],
   plugins: ['unicorn'],
   rules: {
     'arrow-parens': 'off',
