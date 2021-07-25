@@ -1,3 +1,7 @@
+## 0.1.5 (七月 26, 2021)
+
+- fix: eslint-plugin-prettier
+
 ## 0.1.4 (七月 24, 2021)
 
 - feat: extends config with prettier
