@@ -1,3 +1,7 @@
+## 0.1.6 (七月 28, 2021)
+
+- fix: prettier conflict
+
 ## 0.1.5 (七月 26, 2021)
 
 - fix: eslint-plugin-prettier
