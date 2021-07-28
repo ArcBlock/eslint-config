@@ -29,4 +29,7 @@ module.exports = {
   // ],
   // quotes: ['error', 'single'],
   // semi: ['error', 'always'],
+
+  // fix
+  quotes: ['error', 'single', { avoidEscape: true }],
 };
