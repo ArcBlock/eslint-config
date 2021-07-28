@@ -6,7 +6,7 @@ module.exports = {
   rules: {
     'class-methods-use-this': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'import/no-unresolved': ['error', { caseSensitive: true, ignore: ['core/'] }],
+    'import/no-unresolved': ['error', { caseSensitive: true }],
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-param-reassign': ['error', { props: false }],
     'no-plusplus': 'off',

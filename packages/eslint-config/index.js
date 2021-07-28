@@ -6,7 +6,7 @@ module.exports = {
   rules: {
     'class-methods-use-this': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'import/no-unresolved': ['error', { caseSensitive: true, ignore: ['core/'] }],
+    'import/no-unresolved': ['error', { caseSensitive: true }],
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
     'no-console': ['error', { allow: ['warn', 'error'] }],
