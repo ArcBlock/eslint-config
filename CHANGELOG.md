@@ -1,3 +1,7 @@
+## 0.1.8 (July 29, 2021)
+
+- fix: should ignore anything when lint unresolved dependency
+
 ## 0.1.7 (七月 28, 2021)
 
 - fix: quotes
