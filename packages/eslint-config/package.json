@@ -1,7 +1,7 @@
 {
   "name": "@arcblock/eslint-config",
-  "version": "0.1.8",
-  "description": "Arcblock's ESLint config",
+  "version": "0.2.2",
+  "description": "Arcblock's ESLint config for react",
   "author": "zhanghan <zhanghan@arcblock.io>",
   "homepage": "https://github.com/ArcBlock/eslint-config#readme",
   "license": "ISC",
@@ -16,16 +16,24 @@
   "bugs": {
     "url": "https://github.com/ArcBlock/eslint-config/issues"
   },
-  "peerDependencies": {
-    "eslint": "^7.31.0",
-    "eslint-config-airbnb": "^18.2.1",
+  "dependencies": {
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-unicorn": "^34.0.1",
-    "prettier": "^2.3.2"
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-unicorn": "^40.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2"
+  },
+  "peerDependencies": {
+    "eslint": "^8.7.0",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2"
   }
 }
