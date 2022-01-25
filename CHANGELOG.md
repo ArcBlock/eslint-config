@@ -1,3 +1,8 @@
+## 0.2.0 (一月 25, 2022)
+
+- tmp
+- tmp
+
 ## 0.1.8 (July 29, 2021)
 
 - fix: should ignore anything when lint unresolved dependency

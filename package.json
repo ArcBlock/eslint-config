@@ -1,10 +1,12 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "scripts": {
+    "ci:publish": "zx scripts/publish.mjs",
+    "release": "zx scripts/release.mjs"
+  },
   "devDependencies": {
-    "lerna": "^4.0.0"
-  }
+    "zx": "^4.3.0"
+  },
+  "version": "0.8.3"
 }
