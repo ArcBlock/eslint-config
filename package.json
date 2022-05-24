@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "ci:publish": "zx scripts/publish.mjs",
+    "bump-version": "zx scripts/bump-version.mjs --quiet",
     "release": "zx scripts/release.mjs"
   },
   "devDependencies": {
