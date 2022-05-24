@@ -1,8 +1,44 @@
+// follow javascript style from [here](https://github.com/airbnb/javascript)
+
 const prettierRules = require('./prettier.js');
+const res = require.resolve('jest');
+
+console.log(res);
 
 module.exports = {
   extends: ['airbnb-base', 'plugin:prettier/recommended'],
   plugins: ['unicorn'],
+  parserOptions: {
+    ecmaVersion: 2021,
+  },
+  env: {
+    es2021: true,
+    node: true,
+    mocha: true,
+    jest: true,
+  },
+  ignorePatterns: [
+    '*.min.*',
+    '*.d.ts',
+    '.blocklet',
+    '.husky',
+    'node_modules',
+    'CHANGELOG.md',
+    'dist',
+    'build',
+    'LICENSE*',
+    'output',
+    'coverage',
+    'public',
+    'temp',
+    'packages-lock.json',
+    'pnpm-lock.yaml',
+    'yarn.lock',
+    '__snapshots__',
+    '!.github',
+    '!.vitepress',
+    '!.vscode',
+  ],
   rules: {
     'class-methods-use-this': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],

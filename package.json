@@ -6,7 +6,7 @@
     "release": "zx scripts/release.mjs"
   },
   "devDependencies": {
-    "zx": "^4.3.0"
+    "zx": "^6.1.0"
   },
   "version": "0.8.3"
 }
