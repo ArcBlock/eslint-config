@@ -1,3 +1,10 @@
+## 0.2.0 (五月 24, 2022)
+
+- chore: add bump-version scripts
+- chore: update release scripts
+- feat: add example for eslint-config
+- feat: update eslint-config
+
 ## 0.1.8 (July 29, 2021)
 
 - fix: should ignore anything when lint unresolved dependency
