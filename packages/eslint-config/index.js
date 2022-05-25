@@ -5,8 +5,7 @@ const prettierRules = require('./prettier.js');
 module.exports = {
   // why we should use jsx-runtime
   // https://zh-hans.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
-  // don't use 'plugin:react/jsx-runtime' for temporary
-  extends: ['airbnb', 'airbnb/hooks', 'plugin:prettier/recommended'],
+  extends: ['airbnb', 'airbnb/hooks', 'plugin:react/jsx-runtime', 'plugin:prettier/recommended'],
   plugins: ['unicorn'],
   parserOptions: {
     ecmaVersion: 2021,
