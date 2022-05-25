@@ -1,9 +1,6 @@
 // follow javascript style from [here](https://github.com/airbnb/javascript)
 
 const prettierRules = require('./prettier.js');
-const res = require.resolve('jest');
-
-console.log(res);
 
 module.exports = {
   extends: ['airbnb-base', 'plugin:prettier/recommended'],
