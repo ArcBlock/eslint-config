@@ -2,9 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "ci:publish": "zx scripts/publish.mjs",
-    "bump-version": "zx scripts/bump-version.mjs --quiet",
-    "release": "zx scripts/release.mjs"
+    "bump-version": "zx scripts/bump-version.mjs --quiet"
   },
   "devDependencies": {
     "zx": "^6.1.0"

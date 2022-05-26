@@ -41,15 +41,19 @@ jobs:
           npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
           pnpm -r publish --access public --no-git-checks
 
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@main
+
       - name: Update readme
         run: |
           node tools/update-readme.js
           git commit -am '[skip ci] update readme'
+          git tag v${{ steps.package-version.outputs.current-version}}
+
       - name: Push Readme
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GIT_HUB_TOKEN }}
           branch: ${{ github.ref }}
-
-      - name: Release
-        run: npm run release
+          tags: true

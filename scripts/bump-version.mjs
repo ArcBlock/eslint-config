@@ -29,3 +29,5 @@ const changelog = [title, newChangelog, oldChangelog].filter((item) => !!item).j
 
 await fs.writeFile('CHANGELOG.md', changelog);
 await $`read`;
+await $`git add .`;
+await $`git commit -m 'chore(release): v${version}'`;
