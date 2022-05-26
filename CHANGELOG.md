@@ -1,3 +1,7 @@
+## 0.2.1 (五月 26, 2022)
+
+- chore: update ci
+
 ## 0.2.0 (五月 24, 2022)
 
 - chore: add bump-version scripts
