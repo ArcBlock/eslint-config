@@ -1,0 +1,34 @@
+{
+  "name": "@arcblock/eslint-config-ts",
+  "version": "0.2.1",
+  "description": "Arcblock's base config for ESLint & Typescript",
+  "author": "wangshijun <wangshijun@arcblock.io>",
+  "homepage": "https://github.com/ArcBlock/eslint-config#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArcBlock/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArcBlock/eslint-config/issues"
+  },
+  "dependencies": {
+    "@arcblock/eslint-config": "^0.2.1",
+    "@arcblock/eslint-config-base": "^0.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint-config-airbnb-typescript": "^17.0.0"
+  },
+  "devDependencies": {
+    "eslint": "8.16.0",
+    "prettier": "^2.6.2"
+  },
+  "peerDependencies": {
+    "eslint": "8.16.0",
+    "prettier": "^2.6.2"
+  }
+}
