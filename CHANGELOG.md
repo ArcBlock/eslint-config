@@ -1,3 +1,7 @@
+## 0.2.2 (五月 26, 2022)
+
+- feat: support ts config
+
 ## 0.2.1 (五月 26, 2022)
 
 - chore: update ci
