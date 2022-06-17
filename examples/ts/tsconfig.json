@@ -1,0 +1,17 @@
+{
+  /* Visit https://aka.ms/tsconfig.json to read more about this file */
+  "include": ["src"],
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "strictNullChecks": false,
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "outDir": "lib"
+  }
+}

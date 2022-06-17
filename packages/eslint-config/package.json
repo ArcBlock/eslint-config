@@ -1,6 +1,6 @@
 {
   "name": "@arcblock/eslint-config",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Arcblock's ESLint config for react",
   "author": "zhanghan <zhanghan@arcblock.io>",
   "homepage": "https://github.com/ArcBlock/eslint-config#readme",
@@ -23,17 +23,17 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
-    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unicorn": "^42.0.0"
   },
   "devDependencies": {
-    "eslint": "8.16.0",
-    "prettier": "^2.6.2",
+    "eslint": "^8.17.0",
+    "prettier": "^2.7.1",
     "react": "^18.0.0"
   },
   "peerDependencies": {
-    "eslint": "8.16.0",
-    "prettier": "^2.6.2",
+    "eslint": "^8.17.0",
+    "prettier": "^2.7.1",
     "react": "^18.0.0"
   }
 }

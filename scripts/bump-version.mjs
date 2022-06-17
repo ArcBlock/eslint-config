@@ -3,7 +3,9 @@ import { execSync } from 'child_process';
 import { $, chalk, fs } from 'zx';
 
 // or use pnpm to bump version: `pnpm -r --filter {packages/*, themes/*} -- pnpm version`
-execSync('npx --no-install bumpp package.json packages/*/package.json', { stdio: 'inherit' });
+execSync('bumpp package.json packages/*/package.json', {
+  stdio: 'inherit',
+});
 
 const { version } = await fs.readJSON('package.json');
 
