@@ -5,7 +5,8 @@
     "bump-version": "zx scripts/bump-version.mjs --quiet"
   },
   "devDependencies": {
-    "zx": "^6.1.0"
+    "bumpp": "^7.2.0",
+    "zx": "^7.0.0"
   },
   "version": "0.2.2"
 }
