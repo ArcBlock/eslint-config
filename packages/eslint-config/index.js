@@ -6,7 +6,7 @@ module.exports = {
   // why we should use jsx-runtime
   // https://zh-hans.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
   extends: ['airbnb', 'airbnb/hooks', 'plugin:react/jsx-runtime', 'plugin:prettier/recommended'],
-  plugins: ['unicorn'],
+  plugins: ['unicorn', 'jest'],
   parserOptions: {
     ecmaVersion: 2021,
   },
@@ -72,6 +72,8 @@ module.exports = {
         },
       },
     ],
+    'jest/no-disabled-tests': 'error', // disable test.skip()
+    'jest/no-focused-tests': 'error', // disable test.only()
     ...prettierRules,
   },
 };

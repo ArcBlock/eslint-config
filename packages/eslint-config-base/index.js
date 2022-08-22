@@ -4,7 +4,7 @@ const prettierRules = require('./prettier.js');
 
 module.exports = {
   extends: ['airbnb-base', 'plugin:prettier/recommended'],
-  plugins: ['unicorn'],
+  plugins: ['unicorn', 'jest'],
   parserOptions: {
     ecmaVersion: 2021,
   },
@@ -55,6 +55,8 @@ module.exports = {
         },
       },
     ],
+    'jest/no-disabled-tests': 'error', // disable test.skip()
+    'jest/no-focused-tests': 'error', // disable test.only()
     ...prettierRules,
   },
 };

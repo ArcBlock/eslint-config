@@ -1,3 +1,7 @@
+## 0.2.3 (August 22, 2022)
+
+- feat: disable test.skip and test.only
+
 ## 0.2.2 (五月 26, 2022)
 
 - feat: support ts config
