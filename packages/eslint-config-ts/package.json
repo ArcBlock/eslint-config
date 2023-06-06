@@ -1,6 +1,6 @@
 {
   "name": "@arcblock/eslint-config-ts",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Arcblock's base config for ESLint & Typescript",
   "author": "wangshijun <wangshijun@arcblock.io>",
   "homepage": "https://github.com/ArcBlock/eslint-config#readme",
