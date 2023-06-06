@@ -31,8 +31,7 @@ jobs:
         with:
           node-version: '16'
           cache: 'pnpm'
-      - run: npm add -g @antfu/ni
-      - run: nci
+      - run: pnpm i
 
       - name: Lint
         run: nr lint

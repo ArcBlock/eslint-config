@@ -3,11 +3,12 @@
   "private": true,
   "scripts": {
     "lint": "pnpm --filter './examples/**' lint",
-    "bump-version": "zx scripts/bump-version.mjs --quiet"
+    "update:deps": "taze latest -rw && pnpm dedupe",
+    "bump-version": "zx --quiet scripts/bump-version.mjs"
   },
   "devDependencies": {
-    "bumpp": "^7.2.0",
-    "zx": "^7.0.0"
+    "bumpp": "^9.1.1",
+    "zx": "^7.2.2"
   },
   "version": "0.2.4"
 }
