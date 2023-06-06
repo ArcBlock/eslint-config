@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "lint": "pnpm --filter './examples/**' lint",
     "bump-version": "zx scripts/bump-version.mjs --quiet"
   },
   "devDependencies": {
