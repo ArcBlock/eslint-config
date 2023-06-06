@@ -5,6 +5,13 @@ const prettierRules = require('./prettier.js');
 module.exports = {
   extends: ['airbnb-base', 'plugin:prettier/recommended'],
   plugins: ['unicorn', 'jest'],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.mjs'],
+      },
+    },
+  },
   parserOptions: {
     ecmaVersion: 2021,
   },
@@ -40,6 +47,7 @@ module.exports = {
     'class-methods-use-this': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/no-unresolved': ['error', { caseSensitive: true }],
+    'require-await': 'error',
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-param-reassign': ['error', { props: false }],
     'no-plusplus': 'off',
