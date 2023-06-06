@@ -34,4 +34,4 @@ jobs:
       - run: pnpm i --no-frozen-lockfile
 
       - name: Lint
-        run: nr lint
+        run: pnpm lint
