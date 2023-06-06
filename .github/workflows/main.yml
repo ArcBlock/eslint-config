@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: '16'
           cache: 'pnpm'
-      - run: pnpm i
+      - run: pnpm i --no-frozen-lockfile
 
       - name: Config Git
         run: |
