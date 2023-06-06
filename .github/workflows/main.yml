@@ -31,6 +31,9 @@ jobs:
       - run: npm add -g @antfu/ni
       - run: nci
 
+      - name: Lint
+        run: nr lint
+
       - name: Config Git
         run: |
           git config --local user.name "bot"
