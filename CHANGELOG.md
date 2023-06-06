@@ -1,3 +1,9 @@
+## 0.2.4 (June 06, 2023)
+
+- chore: add lint in ci
+- chore: fix lint error in example
+- feat: add rule `require-await`
+
 ## 0.2.3 (August 22, 2022)
 
 - feat: disable test.skip and test.only

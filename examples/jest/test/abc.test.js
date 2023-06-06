@@ -1,3 +1,4 @@
+/* eslint-disable jest/no-export */
 // eslint-disable-next-line import/prefer-default-export
 export function myHelper() {}
 

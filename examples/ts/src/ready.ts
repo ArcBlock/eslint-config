@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import EventEmitter from 'events';
 
 export class Ready extends EventEmitter {

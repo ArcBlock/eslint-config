@@ -1,6 +1,6 @@
 {
   "name": "@arcblock/eslint-config-ts",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Arcblock's base config for ESLint & Typescript",
   "author": "wangshijun <wangshijun@arcblock.io>",
   "homepage": "https://github.com/ArcBlock/eslint-config#readme",
@@ -19,13 +19,13 @@
   "dependencies": {
     "@arcblock/eslint-config": "workspace:*",
     "@arcblock/eslint-config-base": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^5.28.0",
-    "@typescript-eslint/parser": "^5.28.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
     "eslint-config-airbnb-typescript": "^17.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.17.0",
-    "prettier": "^2.7.1"
+    "eslint": "^8.42.0",
+    "prettier": "^2.8.8"
   },
   "peerDependencies": {
     "eslint": "^8.17.0",

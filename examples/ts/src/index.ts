@@ -69,8 +69,8 @@ export const numberToBN = (arg: string | number | BN) => {
   }
   throw new Error(
     `[number-to-bn] while converting number ${JSON.stringify(
-      arg
-    )} to BN.js instance, error: invalid number value. Value must be an integer, hex string, BN or BigNumber instance. Note, decimals are not supported.`
+      arg,
+    )} to BN.js instance, error: invalid number value. Value must be an integer, hex string, BN or BigNumber instance. Note, decimals are not supported.`,
   );
 };
 
@@ -322,7 +322,7 @@ export const hexToBytes = (hex: $TSFixMe) => {
  */
 export const toHex = (
   value: string | number | boolean | BN | Uint8Array | Buffer | (number | { test: string })[] | { test: string },
-  returnType = false
+  returnType = false,
 ): string => {
   if (isUint8Array(value) || Buffer.isBuffer(value)) {
     return returnType ? 'bytes' : bytesToHex(value);
@@ -527,7 +527,7 @@ export function toUint8Array(v: $TSFixMe): Uint8Array {
     vb = new Uint8Array(hexToBytes(toHex(v)));
   } else {
     throw new Error(
-      `Unsupported input type ${typeof v} detected for toBuffer, only Uint8Array/Buffer/Hex/Base58 are supported`
+      `Unsupported input type ${typeof v} detected for toBuffer, only Uint8Array/Buffer/Hex/Base58 are supported`,
     );
   }
   return vb;

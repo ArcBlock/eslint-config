@@ -7,6 +7,13 @@ module.exports = {
   // https://zh-hans.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
   extends: ['airbnb', 'airbnb/hooks', 'plugin:react/jsx-runtime', 'plugin:prettier/recommended'],
   plugins: ['unicorn', 'jest'],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.mjs'],
+      },
+    },
+  },
   parserOptions: {
     ecmaVersion: 2021,
   },
@@ -45,6 +52,7 @@ module.exports = {
     '!.vscode',
   ],
   rules: {
+    'require-await': 'error',
     'class-methods-use-this': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/no-unresolved': ['error', { caseSensitive: true }],
