@@ -53,7 +53,6 @@ module.exports = {
     'no-plusplus': 'off',
     'no-restricted-syntax': ['error', 'ForInStatement', 'LabeledStatement', 'WithStatement'],
     'no-underscore-dangle': 'off',
-    'no-use-before-define': 'off',
     'prefer-object-spread': 'off',
     'unicorn/filename-case': [
       'error',

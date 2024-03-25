@@ -64,7 +64,6 @@ module.exports = {
     'no-plusplus': 'off',
     'no-restricted-syntax': ['error', 'ForInStatement', 'LabeledStatement', 'WithStatement'],
     'no-underscore-dangle': 'off',
-    'no-use-before-define': 'off',
     'prefer-object-spread': 'off',
     'react/destructuring-assignment': 'off',
     'react/forbid-prop-types': 'off',
