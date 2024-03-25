@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-bitwise */
 import isBoolean from 'lodash/isBoolean';
@@ -35,44 +34,6 @@ export type EncodingType = 'hex' | 'base16' | 'base58' | 'base64' | 'Uint8Array'
 export type KeyPairType = { publicKey: BytesType; secretKey: BytesType };
 
 export { BN, leftPad, rightPad };
-
-/**
- * Returns a BN object, converts a number value to a BN
- * @param {String|Number|Object} `arg` input a string number, hex string number, number, BigNumber or BN object
- * @return {Object} `output` BN object of the number
- * @throws if the argument is not an array, object that isn't a bignumber, not a string number or number
- */
-export const numberToBN = (arg: string | number | BN) => {
-  if (typeof arg === 'string' || typeof arg === 'number') {
-    let multiplier = new BN(1); // eslint-disable-line
-    const formattedString = String(arg).toLowerCase().trim();
-    const isHexPrefixed = formattedString.substr(0, 2) === '0x' || formattedString.substr(0, 3) === '-0x';
-    let stringArg = stripHexPrefix(formattedString); // eslint-disable-line
-    if (stringArg.substr(0, 1) === '-') {
-      stringArg = stripHexPrefix(stringArg.slice(1));
-      multiplier = new BN(-1, 10);
-    }
-    stringArg = stringArg === '' ? '0' : stringArg;
-    if (
-      (!stringArg.match(/^-?[0-9]+$/) && stringArg.match(/^[0-9A-Fa-f]+$/)) ||
-      stringArg.match(/^[a-fA-F]+$/) ||
-      (isHexPrefixed === true && stringArg.match(/^[0-9A-Fa-f]+$/))
-    ) {
-      return new BN(stringArg, 16).mul(multiplier);
-    }
-    if ((stringArg.match(/^-?[0-9]+$/) || stringArg === '') && isHexPrefixed === false) {
-      return new BN(stringArg, 10).mul(multiplier);
-    }
-  }
-  if (isBN(arg)) {
-    return new BN(arg.toString(10), 10);
-  }
-  throw new Error(
-    `[number-to-bn] while converting number ${JSON.stringify(
-      arg,
-    )} to BN.js instance, error: invalid number value. Value must be an integer, hex string, BN or BigNumber instance. Note, decimals are not supported.`,
-  );
-};
 
 /**
  * Returns a `boolean` on whether or not the `string` starts with '0x'
@@ -150,6 +111,44 @@ export const isHexStrict = (hex: string) => (isString(hex) || isNumber(hex)) && 
  * @returns {Boolean}
  */
 export const isHex = (hex: string) => (isString(hex) || isNumber(hex)) && /^(-0x|0x|0X|-0X)?[0-9a-f]*$/i.test(hex);
+
+/**
+ * Returns a BN object, converts a number value to a BN
+ * @param {String|Number|Object} `arg` input a string number, hex string number, number, BigNumber or BN object
+ * @return {Object} `output` BN object of the number
+ * @throws if the argument is not an array, object that isn't a bignumber, not a string number or number
+ */
+export const numberToBN = (arg: string | number | BN) => {
+  if (typeof arg === 'string' || typeof arg === 'number') {
+    let multiplier = new BN(1); // eslint-disable-line
+    const formattedString = String(arg).toLowerCase().trim();
+    const isHexPrefixedValue = formattedString.substr(0, 2) === '0x' || formattedString.substr(0, 3) === '-0x';
+    let stringArg = stripHexPrefix(formattedString); // eslint-disable-line
+    if (stringArg.substr(0, 1) === '-') {
+      stringArg = stripHexPrefix(stringArg.slice(1));
+      multiplier = new BN(-1, 10);
+    }
+    stringArg = stringArg === '' ? '0' : stringArg;
+    if (
+      (!stringArg.match(/^-?[0-9]+$/) && stringArg.match(/^[0-9A-Fa-f]+$/)) ||
+      stringArg.match(/^[a-fA-F]+$/) ||
+      (isHexPrefixedValue === true && stringArg.match(/^[0-9A-Fa-f]+$/))
+    ) {
+      return new BN(stringArg, 16).mul(multiplier);
+    }
+    if ((stringArg.match(/^-?[0-9]+$/) || stringArg === '') && isHexPrefixedValue === false) {
+      return new BN(stringArg, 10).mul(multiplier);
+    }
+  }
+  if (isBN(arg)) {
+    return new BN(arg.toString(10), 10);
+  }
+  throw new Error(
+    `[number-to-bn] while converting number ${JSON.stringify(
+      arg,
+    )} to BN.js instance, error: invalid number value. Value must be an integer, hex string, BN or BigNumber instance. Note, decimals are not supported.`,
+  );
+};
 
 /**
  * Takes an input and transforms it into an BN
@@ -310,6 +309,18 @@ export const hexToBytes = (hex: $TSFixMe) => {
 };
 
 /**
+ * Validates if a value is an Uint8Array.
+ *
+ * @public
+ * @static
+ * @param {*} value - value to validate
+ * @returns {Boolean} boolean indicating if a value is an Uint8Array
+ */
+export function isUint8Array(value: $TSFixMe) {
+  return Object.prototype.toString.call(value) === '[object Uint8Array]';
+}
+
+/**
  * Auto converts any given value into it's hex representation.
  * And even stringify objects before.
  *
@@ -348,6 +359,7 @@ export const toHex = (
     // TODO: some edge case may be not properly handled here
     return returnType ? 'string' : utf8ToHex(value);
   }
+  // @ts-ignore
   // eslint-disable-next-line no-nested-ternary
   return returnType ? (value < 0 ? 'int256' : 'uint256') : numberToHex(value);
 };
@@ -462,18 +474,6 @@ export const fromTokenToUnit = (input: string | number, decimal = 18) => {
   }
   return new BN(unit.toString(10), 10);
 };
-
-/**
- * Validates if a value is an Uint8Array.
- *
- * @public
- * @static
- * @param {*} value - value to validate
- * @returns {Boolean} boolean indicating if a value is an Uint8Array
- */
-export function isUint8Array(value: $TSFixMe) {
-  return Object.prototype.toString.call(value) === '[object Uint8Array]';
-}
 
 /**
  * Generate a random UUID

@@ -1,3 +1,7 @@
+## 0.3.0 (March 25, 2024)
+
+- feat: add `no-use-before-define` rule
+
 ## 0.2.4 (June 06, 2023)
 
 - chore: add lint in ci

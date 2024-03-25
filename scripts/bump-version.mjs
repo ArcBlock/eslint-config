@@ -3,7 +3,7 @@ import { execSync } from 'child_process';
 import { $, chalk, fs } from 'zx';
 
 // or use pnpm to bump version: `pnpm -r --filter {packages/*, themes/*} -- pnpm version`
-execSync('bumpp package.json packages/*/package.json', {
+execSync('bumpp package.json packages/*/package.json --no-push --no-tag --no-commit', {
   stdio: 'inherit',
 });
 
