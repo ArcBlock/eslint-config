@@ -15,12 +15,12 @@
   },
   "devDependencies": {
     "@arcblock/eslint-config": "workspace:*",
-    "@types/react": "^18.2.8",
-    "@types/react-dom": "^18.2.4",
-    "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "8.42.0",
-    "jest": "^29.5.0",
-    "prettier": "^2.8.8",
-    "vite": "^4.3.9"
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.2",
+    "vite": "^5.3.1"
   }
 }
