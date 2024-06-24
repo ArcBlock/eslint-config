@@ -1,3 +1,8 @@
+## 0.3.1 (June 24, 2024)
+
+- chore(ci): update ci deps version
+- chore(deps): update deps
+
 ## 0.3.0 (March 25, 2024)
 
 - feat: add `no-use-before-define` rule
