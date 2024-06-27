@@ -10,6 +10,7 @@ module.exports = {
   },
   rules: {
     ...prettierRules,
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     '@typescript-eslint/comma-dangle': 'off',
     '@typescript-eslint/comma-dangle': 'off',
     '@typescript-eslint/no-var-requires': 'off',
