@@ -1,3 +1,8 @@
+## 0.3.2 (June 28, 2024)
+
+- chore(deps): update deps
+- fix: add `import/no-extraneous-dependencies` in ts-config by default
+
 ## 0.3.1 (June 24, 2024)
 
 - chore(ci): update ci deps version
