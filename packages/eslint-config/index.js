@@ -55,7 +55,7 @@ module.exports = {
     'require-await': 'error',
     'class-methods-use-this': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'import/no-unresolved': ['error', { caseSensitive: true }],
+    'import/no-unresolved': ['error', { commonjs: true, caseSensitive: true }],
     'import/extensions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',

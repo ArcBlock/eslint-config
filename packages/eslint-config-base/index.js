@@ -46,7 +46,7 @@ module.exports = {
   rules: {
     'class-methods-use-this': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'import/no-unresolved': ['error', { caseSensitive: true }],
+    'import/no-unresolved': ['error', { commonjs: true, caseSensitive: true }],
     'require-await': 'error',
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-param-reassign': ['error', { props: false }],
