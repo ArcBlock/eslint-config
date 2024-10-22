@@ -1,3 +1,7 @@
+## 0.3.3 (October 22, 2024)
+
+- chore: enable import/no-unresolved rule for commonjs
+
 ## 0.3.2 (June 28, 2024)
 
 - chore(deps): update deps
